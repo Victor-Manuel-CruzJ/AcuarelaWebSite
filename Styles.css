@@ -483,3 +483,66 @@ nav {
     width: 300px;
   }
 }
+/* --- HERO VIDEO YOUTUBE --- */
+.banner-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 10px solid white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- TESTIMONIOS YOUTUBE --- */
+.testimonios-carousel iframe {
+  width: 400px;
+  aspect-ratio: 16 / 9;
+  border-radius: 25px;
+  border: 6px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+  .testimonios-carousel iframe {
+    width: 300px;
+  }
+}
+.testimonios-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.video-wrapper {
+  flex: 0 0 auto;
+  width: 80vw; /* ocupa 80% del ancho de la pantalla */
+  max-width: 600px;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  scroll-snap-align: center;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Opcional: ocultar scroll bar en Webkit */
+.testimonios-carousel::-webkit-scrollbar {
+  display: none;
+}
